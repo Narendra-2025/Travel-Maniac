@@ -9,7 +9,7 @@ const Portfolio = () => {
     <div className='portfolio section container'>
       <div className="secContainer grid">
         <div className="leftContent">
-          <div className="scheading">
+          <div className="secHeading">
             <h3>Why Should You Choos Us</h3>
             <p>
               We have experience in the travel industry.

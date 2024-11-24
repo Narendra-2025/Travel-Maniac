@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// All project colors
+root{
+ --primaryColor: hsl(14, 90% , 53%);
+ --primaryColorLight: hsl(14, 96% , 91%);
+ --bgColor: hsl(0, 0% , 100%);
+ --formColor: hsl(20, 42% , 87%);
+ --whiteColor: hsl(0, 0% , 100%);
+ --blackColor: hsl(0, 0% , 19%);
+ --grayText: hsl(0, 0% , 52%);
+ --inputColor: hsl(330, 12% , 97%);
+ --cardColor: hsl(300, 4% , 94%);
+
+ // Fonts and Typography
+ --biggestFontSize: 2.5rem;
+ --h1FontSize: 1.6rem;
+ --h2FontSize: 1.2rem;
+ --h3FontSize: 1rem;
+ --normalFontSize: 0.938rem;
+ --smallFontSize: 0.814rem;
+ --smallestFontSize: 0.75rem;
+ --borderRadius: 0.75rem;
+
+}
+
+.review{
+    .secContainer{
+        .textDiv{
+            .redText{
+                font-size: var(--smallFontSize);
+                display: block;
+                color: var(--primaryColor);
+                font-weight: 700;
+
+
+            }
+            h3{
+                font-size: var(--h2FontSize);
+                color: var(--blackColor);
+                padding: 1rem 0;
+            }
+            p{
+                color: var(--blackColor);
+            }
+            .stars{
+                gap: .4rem;
+                padding: 1rem 0;
+                .icon{
+                    color: var(--primaryColor);
+                    font-size: var(--h3FontSize);
+                }
+
+            }
+            .clientsImages{
+                gap: 1rem;
+
+                img{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid rgb(255,255,255);
+                    box-shadow: 0 0 2px 2px rgb(251, 212, 194);
+                }
+            }
+        }
+
+        .imgDiv{
+            height: 260px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+}

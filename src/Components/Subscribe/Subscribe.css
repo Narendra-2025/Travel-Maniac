@@ -1,1 +1,31 @@
-/*# sourceMappingURL=Subscribe.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+root {
+  --primaryColor: hsl(14, 90% , 53%);
+  --primaryColorLight: hsl(14, 96% , 91%);
+  --bgColor: hsl(0, 0% , 100%);
+  --formColor: hsl(20, 42% , 87%);
+  --whiteColor: hsl(0, 0% , 100%);
+  --blackColor: hsl(0, 0% , 19%);
+  --grayText: hsl(0, 0% , 52%);
+  --inputColor: hsl(330, 12% , 97%);
+  --cardColor: hsl(300, 4% , 94%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.2rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.814rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 0.75rem;
+}
+
+.subscribe .secContainer .textDiv h4 {
+  font-size: var(--h2FontSize);
+  color: var(--blackColor);
+}
+.subscribe .secContainer .textDiv p {
+  padding: 1rem 0;
+}
+.subscribe .secContainer .textDiv .btn {
+  padding: 0.5rem 2rem;
+}/*# sourceMappingURL=Subscribe.css.map */

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+// All project colors
+root{
+ --primaryColor: hsl(14, 90% , 53%);
+ --primaryColorLight: hsl(14, 96% , 91%);
+ --bgColor: hsl(0, 0% , 100%);
+ --formColor: hsl(20, 42% , 87%);
+ --whiteColor: hsl(0, 0% , 100%);
+ --blackColor: hsl(0, 0% , 19%);
+ --grayText: hsl(0, 0% , 52%);
+ --inputColor: hsl(330, 12% , 97%);
+ --cardColor: hsl(300, 4% , 94%);
+
+ // Fonts and Typography
+ --biggestFontSize: 2.5rem;
+ --h1FontSize: 1.6rem;
+ --h2FontSize: 1.2rem;
+ --h3FontSize: 1rem;
+ --normalFontSize: 0.938rem;
+ --smallFontSize: 0.814rem;
+ --smallestFontSize: 0.75rem;
+ --borderRadius: 0.75rem;
+
+}
+
+.accordionContainer{
+    .title{
+        font-size: var(--normalFontSize);
+        align-items: center;
+        padding: 1rem;
+        border-radius: 10px;
+        justify-content: space-between;
+        background: var(--primaryColorLight);
+
+        span{
+            cursor: pointer;
+            .icon{
+                font-size: 1.2rem;
+                color: var(--blackColor);
+                
+
+            };
+        }
+    }
+
+    .description{
+        font-size: var(--smallFontSize);
+        display: flex;
+        align-items: center;
+        line-height: 20px;
+        white-space: pre-line;
+        height: 0px;
+        transition: all .3s ease-in-out;
+        opacity: 0;
+        padding: 0 1rem;
+        background: var(--cardColor);
+        border-radius: 0 0 10px 10px;
+        color: var(--blackColor);
+
+    }
+
+    .show{
+        height: 140px;
+        opacity: 1;
+
+    }
+
+    .activeTitle{
+        background: var(--primaryColorLight);
+        border-radius: 10px 10px 0 0;
+    }
+
+}
+
+.questions{
+    .secHeading{
+        h3,h4{
+            padding-bottom: 1.5rem;
+        }
+        p{
+            font-size: var(--smallFontSize);
+            color: var(--blackColor);
+            padding-bottom: 1rem;
+
+        }
+    }
+    .form{
+        .formContent{
+            gap: 1rem;
+            input,textarea{
+                background: var(--cardColor);
+                width: 100%;
+                padding: 1rem;
+                border: none;
+                outline: none;
+                border-radius: var(--borderRadius);
+                & ::placeholder{
+                    font-size: small;
+                    color: var(--blackColor);
+                }
+            }
+            textarea{
+                height: 100px;
+                border-radius: 10px;
+            }
+        }
+    }
+}

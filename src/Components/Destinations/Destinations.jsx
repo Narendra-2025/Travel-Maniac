@@ -82,7 +82,7 @@ const Destinations = () => {
   return (
     <div className="destination section container">
       <div className="secContainer">
-        <div className="">
+        <div className="secTitle">
           <span className="redText">Explore Now</span>
           <h3>Find Your Dream Destinations </h3>
           <p>

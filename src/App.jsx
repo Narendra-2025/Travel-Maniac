@@ -20,9 +20,9 @@ function App() {
       <Destinations/>
       <Portfolio/>
       <Reviews/>
-      {/* <Questions/>
+      <Questions/>
       <Subscribe/>
-      <Footer/> */}
+      <Footer/>
 
     </div>
     

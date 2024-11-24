@@ -152,3 +152,152 @@ root{
         }
     }
 }
+
+@media screen and (min-width: 520px) {
+    .destination{
+        .secContainer{
+            .searchField{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .destinationContainer{
+                grid-template-columns: repeat(2 ,1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .destination{
+        .secContainer{
+            
+
+            .secMenu{
+                display: block;
+                .flex{
+                    width: 100%;
+                    margin: 2rem auto;
+                    justify-content: center;
+                    gap: 1rem;
+                    li{
+                        background: transparent;
+                        padding: 10px 17px;
+                        border-radius: var(--borderRadius);
+                        color: var(--blackColor);
+                        border: 1.5px dashed transparent;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: var(--primaryColor);
+                            border: 1.5px dashed var(--primaryColor);
+
+                        }
+                    }
+
+                    .active{
+                        color: var(--primaryColor);
+                        border: 1.5px dashed var(--primaryColor);
+                        
+                    }
+                }
+
+            }
+
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1014px) {
+    .destination{
+        .secContainer{
+            .secTitle{
+                .redText{
+                    font-size: var(--normalFontSize);
+                }
+
+                h3{
+                    font-size: var(--h1FontSize);
+                }
+                p{
+                    font-size: var(--h3FontSize);
+                }
+            }
+            .searchField{
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+
+
+            .secMenu{
+                
+                .flex{
+                    justify-content: left;
+                    
+                    li{
+                        background: transparent;
+                        padding: 10px 17px;
+                        border-radius: var(--borderRadius);
+                        color: var(--blackColor);
+                        border: 1.5px dashed transparent;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: var(--primaryColor);
+                            border: 1.5px dashed var(--primaryColor);
+
+                        }
+                    }
+
+                    .active{
+                        color: var(--primaryColor);
+                        border: 1.5px dashed var(--primaryColor);
+                        
+                    }
+                }
+
+            }
+
+            
+        }
+    }
+}
+@media screen and (min-width: 1148px) {
+    .destination{
+        .secContainer{
+            
+            .secTitle{
+                
+
+                h3{
+                    font-size: var(--biggestFontSizeb);
+                }
+                p{
+                    font-size: var(--h2FontSize);
+                }
+            }
+
+            .destinationContainer{
+                grid-template-columns: repeat(3 ,1fr);
+            }
+
+            
+            
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .destination{
+        .secContainer{
+            
+           
+            .destinationContainer{
+                grid-template-columns: repeat(4 ,1fr);
+            }
+
+            
+            
+        }
+    }
+}

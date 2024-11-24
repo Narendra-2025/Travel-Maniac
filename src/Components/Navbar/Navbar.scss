@@ -31,11 +31,11 @@
     padding: 1.5rem 2rem;
     position: fixed;
     border-bottom: 1.5px solid rgb(212, 212, 212);
-    
-    // Background
-
+    background: rgba(255, 255, 255, 0.736);
     backdrop-filter: blur(5px);
     z-index: 1000;
+
+
     .logoDiv {
         display: flex;
         align-items: center;
@@ -95,5 +95,66 @@
 
     .showNavbar{
         top: 8rem;
+    }
+}
+
+@media screen and (min-width:760px) {
+    .navBar{
+        .logoDiv{
+            span{
+                font-size: var(--h2FontSize);
+
+            }
+            
+        }
+        .closeIcon, .menuIcon{
+            display: none;
+
+        }
+
+        .menu{
+            ul{
+                display: flex;
+                gap: 1rem;
+
+                li{
+                    font-size: var(--h2FontSize);
+                    font-weight: 500;
+                    padding: 1rem 0;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: var(--primaryColor);
+                        border-bottom: 1.5px solid var(--primaryColor);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .navBar{
+        padding: 2rem 6rem;
+
+        .menu{
+            ul{
+                gap: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navBar{
+        padding: 2rem 14rem;
+
+        .menu{
+            ul{
+                gap: 4rem;
+            }
+        }
     }
 }

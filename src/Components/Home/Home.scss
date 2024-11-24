@@ -75,4 +75,127 @@
     }
 }
 
+@media screen and (min-width: 480px){
+    .Home{
+        .sectionText{
+            padding: 0 2rem;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+           
+            h1{
+                font-size: var(--biggestFontSize);
+                font-weight: 900;
+            }
 
+            p{
+                padding: 1rem 0;
+                font-size: var(--h2FontSize);
+                max-width: 70%;
+                margin: auto;
+
+            }
+
+            .btn{
+                font-size: var(--h3FontSize);
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 760px){
+    .Home{
+        .sectionText{
+            width: 100%;
+
+            h1{
+                font-size: 4rem;
+                font-weight: 900;
+                max-width: 70%;
+                margin: auto;
+            }
+
+            p{
+                padding: 1rem 0;
+                font-size: var(--h2FontSize);
+                max-width: 70%;
+                margin: auto;
+            }
+
+            .btn{
+                gap: .5rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+                font-size: var(--h3FontSize);
+                margin: auto;
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    .Home{
+        position: relative;
+
+        .sectionText{
+            
+
+            h1{
+                font-size: 4.5rem;
+                font-weight: 900;
+                max-width: 70%;
+                margin: auto;
+            }
+
+            
+        }
+
+        .popularPlaces{
+            display: block;
+            position: absolute;
+            bottom: 6%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .content{
+                h3{
+                    color: var(--whiteColor);
+                    padding: 1rem 0;
+                    position: relative;
+        
+                    &::after{
+                        content: '';
+                        width: 83%;
+                        height: 2px;
+                        background: rgb(202, 202, 202);
+                        right: 0;
+                        bottom: 50%;
+                        position: absolute;
+                    }
+                }
+                .images{
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+
+                    img{
+                        height: 100px;
+                        width: 210px;
+                        object-fit: cover;
+                        border-radius: 10px;
+
+
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    
+}

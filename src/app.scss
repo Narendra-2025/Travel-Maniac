@@ -89,7 +89,7 @@ img , video{
 }
 
 .secTitle{
-    display: none;
+    display: grid;
     text-align: center;
     padding: 1rem 0;
     font-size: 25px;
@@ -103,6 +103,9 @@ img , video{
         font-size: var(--normalFontSize);
         font-weight: 400;
 
+    }
+    h3{
+        font-size: var(--h1FontSize);
     }
 }
 
@@ -143,4 +146,18 @@ img , video{
     background: var(--primaryColor);
     border-radius: var(--borderRadius);
     
+}
+
+//media querie
+
+@media screen and (min-width: 840px) {
+    .section{
+        padding: 4rem 0 3rem;
+
+    }
+
+    .container{
+        width: 70%;
+        margin: auto;
+    }
 }

@@ -19,6 +19,9 @@ root {
   --borderRadius: 0.75rem;
 }
 
+.portfolio .secContainer {
+  gap: 2rem;
+}
 .portfolio .secContainer .leftContent .grid .singlePortfolio {
   gap: 1rem;
   align-items: flex-start;
