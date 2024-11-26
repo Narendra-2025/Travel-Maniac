@@ -1,29 +1,36 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Portfolio.css'
-import icon1 from '../../asset/204158817.png'
+import icon1 from '../../asset/kindpng_10220.png'
 import icon2 from '../../asset/destination.png'
 import icon3 from '../../asset/support.png'
-import image from '../../asset/gidd-img.jpg'
+import image from '../../asset/hikes.jpg'
+import Aos from "aos";
+import 'aos/dist/aos.css';
+
 const Portfolio = () => {
+  useEffect(()=> {
+    Aos.init({duration: 2000})
+  },[]);
+  
   return (
     <div className='portfolio section container'>
       <div className="secContainer grid">
         <div className="leftContent">
           <div className="secHeading">
-            <h3>Why Should You Choos Us</h3>
-            <p>
+            <h3 data-aos = 'fade-up'>Why Should You Choose Us</h3>
+            <p data-aos = 'fade-up'>
               We have experience in the travel industry.
             </p>
           </div>
           <div className="grid">
-            <div className="singlePortfolio flex">
+            <div className="singlePortfolio flex" data-aos = 'fade-up'>
               <div className="iconDiv">
                 <img src={icon1} alt="Health and Safety" />
               </div>
 
               <div className="infor">
-                <h4>safety and support</h4>
-                <p>
+                <h4 data-aos = 'fade-up'>safety and support</h4>
+                <p data-aos = 'fade-up'>
                   The safety and well-being of our clients are our highest priorities.
                   We uphold exceptional safety standards and ensure round-the-clock emergency
                   support to guarantee a secure and worry-free experience throughout your journey.
@@ -33,7 +40,7 @@ const Portfolio = () => {
             </div>
             
 
-            <div className="singlePortfolio flex">
+            <div className="singlePortfolio flex" data-aos = 'fade-up'>
               <div className="iconDiv">
                 <img src={icon2} alt="Destination" />
               </div>
@@ -49,7 +56,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="singlePortfolio flex">
+            <div className="singlePortfolio flex" data-aos = 'fade-up'>
               <div className="iconDiv">
                 <img src={icon3} alt="Support" />
               </div>
@@ -66,7 +73,7 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <div className="rightcontent">
+        <div className="rightContent" data-aos = 'fade-down'>
           <img src={image} alt="grid image" />
         </div>
       </div>

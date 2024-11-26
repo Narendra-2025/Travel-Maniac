@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState }  from "react";
 import "./Questions.css";
 import { Accordion } from "./Accordion";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 const Questions = () => {
   const [active, setActive] = useState("");
+  useEffect(()=> {
+    Aos.init({duration: 2000})
+  },[]);
+   
   return (
     <div className="questions section container">
       <div className="secHeading">
-        <h3>Frequently Asked Questions</h3>
+        <h3 data-aos = 'fade-up'>Frequently Asked Questions</h3>
       </div>
       <div className="secContainer grid">
         <div className="accordion grid">
@@ -53,16 +61,16 @@ const Questions = () => {
 
         <div className="form">
           <div className="secHeading">
-            <h4>Do you have any specific questions?</h4>
-            <p>
+            <h4 data-aos = 'fade-up'>Do you have any specific questions?</h4>
+            <p data-aos = 'fade-up'>
               Please Fill the form below our dedicated team will get in touch
               with you as soon as possible.
             </p>
           </div>
           <div className="formContent grid">
-            <input type="email" placeholder="Enter email address" />
-            <textarea placeholder="Enter your question here"></textarea>
-            <button className="btn">Submit Inquiry</button>
+            <input type="email" placeholder="Enter email address" data-aos = 'fade-up' />
+            <textarea placeholder="Enter your question here" data-aos = 'fade-up'></textarea>
+            <button className="btn" data-aos = 'fade-up'>Submit Inquiry</button>
           </div>
         </div>
       </div>

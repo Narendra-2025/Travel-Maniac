@@ -1,6 +1,7 @@
-import React from "react";
+import React , {useEffect} from "react";
 import "./Destinations.css";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 //import icon
 
 import { MdLocationPin } from "react-icons/md";
@@ -79,36 +80,39 @@ const destinations = [
   },
 ];
 const Destinations = () => {
+  useEffect(()=> {
+    Aos.init({duration: 2000})
+  },[])
   return (
     <div className="destination section container">
       <div className="secContainer">
         <div className="secTitle">
-          <span className="redText">Explore Now</span>
-          <h3>Find Your Dream Destinations </h3>
-          <p>
+          <span className="redText" data-aos = 'fade-up'>Explore Now</span>
+          <h3 data-aos = 'fade-up'>Find Your Dream Destinations </h3>
+          <p data-aos = 'fade-up'>
             Fill in the feilds below to find the best spot for your next tour.
           </p>
         </div>
 
         <div className="searchField grid">
-          <div className="inputField flex">
+          <div className="inputField flex" data-aos = 'fade-up'>
             <MdLocationPin className="icon" />
             <input type="text" placeholder="Location" />
           </div>
-          <div className="inputField flex">
+          <div className="inputField flex" data-aos = 'fade-up'>
             <BsFillCreditCardFill className="icon" />
             <input type="text" placeholder="Budget" />
           </div>
-          <div className="inputField flex">
+          <div className="inputField flex" data-aos = 'fade-up'>
             <BsFillCalendarDateFill className="icon" />
             <input type="text" placeholder="date" />
           </div>
-          <button className="btn flex">
+          <button className="btn flex" data-aos = 'fade-up'>
             <BiSearchAlt className="icon" /> Search
           </button>
         </div>
 
-        <div className="secMenu">
+        <div className="secMenu" data-aos = 'fade-up'>
           <ul className="flex">
             <li className="active">All</li>
             <li>Recomended</li>
@@ -122,8 +126,8 @@ const Destinations = () => {
         <div className="destinationContainer grid">
           {destinations.map((destination) => {
             return (
-              <div className="singleDestination" key={destination.id}>
-                <div className="imgDiv">
+              <div className="singleDestination" key={destination.id} data-aos = 'fade-up'>
+                <div className="imgDiv" data-aos = 'fade-up'>
                   <img src={destination.img} alt="Destination Image" />
 
                   <div className="descInfo flex">

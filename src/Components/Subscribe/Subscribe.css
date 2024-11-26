@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 root {
-  --primaryColor: hsl(14, 90% , 53%);
-  --primaryColorLight: hsl(14, 96% , 91%);
-  --bgColor: hsl(0, 0% , 100%);
-  --formColor: hsl(20, 42% , 87%);
-  --whiteColor: hsl(0, 0% , 100%);
-  --blackColor: hsl(0, 0% , 19%);
-  --grayText: hsl(0, 0% , 52%);
-  --inputColor: hsl(330, 12% , 97%);
-  --cardColor: hsl(300, 4% , 94%);
+  --primaryColor: hsl(14, 90%, 53%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 19%);
+  --grayText: hsl(0, 0%, 52%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 4%, 94%);
   --biggestFontSize: 2.5rem;
   --h1FontSize: 1.6rem;
   --h2FontSize: 1.2rem;
@@ -19,6 +19,21 @@ root {
   --borderRadius: 0.75rem;
 }
 
+.subscribe .secContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to a single column */
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+.subscribe .secContainer img {
+  max-width: 90%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin: 0 auto;
+}
 .subscribe .secContainer .textDiv h4 {
   font-size: var(--h2FontSize);
   color: var(--blackColor);
@@ -28,4 +43,54 @@ root {
 }
 .subscribe .secContainer .textDiv .btn {
   padding: 0.5rem 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  .subscribe .secContainer img {
+    max-width: 75%;
+    margin: auto;
+  }
+  .subscribe .secContainer .textDiv h4 {
+    font-size: 1.5rem;
+  }
+  .subscribe .secContainer .textDiv p {
+    padding: 1rem 0;
+    font-size: var(--h3FontSize);
+  }
+  .subscribe .secContainer .textDiv .btn {
+    padding: 0.5rem 2rem;
+    font-size: var(--h2FontSize);
+  }
+}
+@media screen and (min-width: 640px) {
+  .subscribe .secContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .subscribe .secContainer img {
+    width: 100%;
+    margin: auto;
+  }
+  .subscribe .secContainer .textDiv h4 {
+    font-size: 2rem;
+  }
+  .subscribe .secContainer .textDiv p {
+    padding: 1rem 0;
+    font-size: var(--h3FontSize);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .subscribe .secContainer {
+    gap: 3rem;
+  }
+  .subscribe .secContainer img {
+    max-width: 90%;
+    border-radius: 15px; /* Slightly more rounded for larger screens */
+  }
+  .subscribe .secContainer .textDiv h4 {
+    font-size: var(--h1FontSize);
+  }
+  .subscribe .secContainer .textDiv p {
+    padding: 2rem 0;
+    font-size: var(--h2FontSize);
+  }
 }/*# sourceMappingURL=Subscribe.css.map */

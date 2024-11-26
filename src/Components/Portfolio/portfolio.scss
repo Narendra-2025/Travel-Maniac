@@ -49,5 +49,186 @@ root{
                 }
             }
         }
+        .rightContent {
+            img {
+                margin: auto;
+                max-width: 100%;
+                border-radius: 15px; /* Soft rounded edges */
+                transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+                margin-left: 1.5rem;
+
+                &:hover {
+                    transform: scale(1.05); /* Slight zoom on hover */
+                    filter: brightness(1.1) saturate(1.2); /* Enhanced vibrancy */
+                }
+            }
+        }
+    }
+}
+
+//Media queries
+@media screen and (max-width: 479px) {
+    .portfolio {
+        .secContainer {
+            .rightContent {
+                img {
+                    transform: scale(1.2); /* Zoom in the image */
+                    
+                    max-height: 75%; /* Keeps image within bounds */
+                    max-width: 80%; /* Prevent overflow */
+                    height: auto; /* Maintain aspect ratio */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .portfolio{
+        .secContainer{
+            grid-template-columns: repeat(1 , 1fr);
+            .leftContent{
+                .secHeading{
+                    h3{
+                        font-size: var(--h2FontSize);
+
+                    }
+                    p{
+                        font-size: var(--normalFontSize);
+                        padding: .5rem 0;
+
+                    }
+                }
+
+                .grid{
+                    .singlePortfolio{
+                        gap: 1.5rem;
+                        .iconDiv{
+                            img{
+                                width: 60px;
+                                height: 60px;
+                            }
+                        }
+                        .infor{
+                            h4{
+                                padding: .5rem;
+                                font-size: var(--h3FontSize);
+                            }
+                            p{
+                                font-size: var(--normalFontSize);
+                            }
+                        }
+                    }
+                }
+            }
+            .rightContent {
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-height: 300px; /* Slightly larger for medium-small screens */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .portfolio{
+        .secContainer{
+            .leftContent{
+                .secHeading{
+                    h3{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: var(--h3FontSize);
+                    }
+                }
+
+                .grid{
+                    grid-template-columns: repeat(2, 1fr);
+                    
+                    .singlePortfolio{
+                        gap: 1.5rem;
+                        
+                    }
+                }
+            }
+            .rightContent{
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-height: 350px; /* Larger for tablet screens */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .portfolio{
+        .secContainer{
+            grid-template-columns: repeat(2, 1fr);
+            .leftContent{
+                .secHeading{
+                    h3{
+                        font-size: var(--h2FontSize);
+                    }
+                    p{
+                        font-size: var(--h3FontSize);
+                    }
+                }
+                .grid{
+                    grid-template-columns: repeat(1 , 1fr);
+                }
+                .singlePortfolio{
+                    gap: 1.5rem;
+                }
+            }
+            .rightContent {
+                img {
+                    max-height: 400px; /* Full size for desktop-like screens */
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .portfolio{
+        .secContainer{
+            gap: 3rem;
+
+            .leftContent{
+                .secHeading{
+                    h3{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: var(--h3FontSize);
+                    }
+                }
+                .grid{
+                    gap: 2.5rem;
+                    margin-top: 3rem;
+
+                    .singlePortfolio{
+                        gap: 2rem;
+                        
+                    }
+                }
+            }
+            .rightContent {
+                img {
+                    max-height: 450px; /* Slightly larger for wider screens */
+                }
+            }
+        }
     }
 }
